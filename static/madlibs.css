@@ -1,0 +1,31 @@
+.storybody {
+    font-family: Courgette;
+    width: 50%;
+}
+
+.storyheading {
+    font-family: Berkshire Swash;
+    width: 50%;
+}
+
+.storyend {
+    font-family: Berkshire Swash;
+    text-align: right;
+    width: 50%;
+}
+
+.altbody {
+    font-family: Roboto;
+    width: 50%;
+}
+
+.altheading {
+    font-family: VT323;
+    width: 50%;
+}
+
+.altend {
+    font-family: VT323;
+    text-align: right;
+    width: 50%;
+}

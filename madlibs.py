@@ -60,15 +60,24 @@ def show_game_form():
 
 
 
-@app.route('/madlib')
+@app.route('/madlib', methods=['POST', 'GET'])
 def show_madlib():
 
-    character = request.args.get('character')
-    color = request.args.get('color')
-    noun = request.args.get('noun')
-    adjs = request.args.getlist('adj')
+    if request.method == "GET":
+        character = request.args.get('character')
+        color = request.args.get('color')
+        noun = request.args.get('noun')
+        adjs = request.args.getlist('adj')
 
-    return render_template('madlib.html', character=character,
+    elif request.method == "POST":
+        character = request.form.get('character')
+        color = request.form.get('color')
+        noun = request.form.get('noun')
+        adjs = request.form.getlist('adj')
+
+    which_template = choice(['madlib.html', 'altmadlib.html'])
+
+    return render_template(which_template, character=character,
                             color=color, noun=noun, adjs=adjs)
 
 if __name__ == '__main__':
