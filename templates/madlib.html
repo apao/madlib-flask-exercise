@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} madlib.html {% endblock %}
+
+{% block body%} 
+
+<h1>ONCE UPON A TIME...</h1>
+
+<p>...a princess named {{ character }} lived in a castle with the Evil Queen.</p>
+
+<p>One day, the Evil Queen asked, "Mirror, Mirror, On the Wall, who's the smartest of them all?"</p>
+
+<p>The Mirror responded, "You are the wisest, smartest and most brilliant, BUT there is this one 
+    {% for adj in adjs %}
+        {{ adj }}
+    {% endfor %} person out there that you cannot match."</p>
+
+<p>The Evil Queen was furious, face turning bright {{ color }}, and yelled, "How dare you! I am just as 
+    {% for adj in adjs %}
+        {{ adj }}
+    {% endfor %} 
+    as princess {{ character }}." She kicked the Mirror which shattered into a gazillion shards, never to be heard from again.
+
+<h1>THE END</h1>
+
+
+{% endblock %}
