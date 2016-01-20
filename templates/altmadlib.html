@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %} altmadlib.html {% endblock %}
+
+{% block body%} 
+
+<div class = "altheading">
+
+    <h1>In a galaxy far far away...</h1>
+
+</div>
+
+<div class = "altbody">
+
+    <p>...a princess named {{ character }} lived in a spaceship with Darth Vader.</p>
+
+    <p>One day, Darth Vader said, "{{ character }}, search your feelings! I'm your father!!!"</p>
+
+    <p>Princess {{ character }} responded, "No freaking way! You're too 
+
+        {% for adj in adjs %}
+            {{ adj }}
+        {% endfor %} to be my father! My father is Prince Charming!"</p>
+
+    <p>Darth Vader was furious, face turning bright {{ color }}, and yelled, "How dare you! I am not
+        {% for adj in adjs %}
+            {{ adj }}
+        {% endfor %} 
+        at all! I'm just as handsome and adorable as Prince Charming." He cut the storm troopers with his light saber into a gazillion shards, never to be seen from again.
+
+    </div>
+
+<div>
+
+    <h1 class = "altend">THE END</h1>
+
+</div>
+
+
+{% endblock %}
